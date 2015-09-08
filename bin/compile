@@ -63,7 +63,7 @@ export CPPPATH="$CPATH"
 # Install meteor
 #
 echo "-----> Installing meteor"
-curl -sS https://install.meteor.com | HOME="$METEOR_DIR" /bin/sh
+curl -sS https://install.meteor.com | HOME="$METEOR_DIR" /bin/sh 2> /dev/null
 METEOR="$METEOR_DIR/.meteor/meteor" # The meteor binary.
 
 #
