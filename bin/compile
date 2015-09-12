@@ -33,9 +33,9 @@ APP_SOURCE_DIR="$APP_CHECKOUT_DIR"
 # The Iron scaffolding tool (https://github.com/iron-meteor/iron-cli) place the
 # Meteor app in /app/ instead of in the root. So let's try the /app/ folder if
 # there is no Meteor app in the root.
-[ -z "$APP_DIR" ] && APP_DIR="app"
-if [ ! -d "$APP_SOURCE_DIR/.meteor" ] && [ -d "$APP_SOURCE_DIR/$APP_DIR/.meteor" ]; then
-  APP_SOURCE_DIR="$APP_SOURCE_DIR/$APP_DIR/"
+[ -z "$METEOR_APP_DIR" ] && METEOR_APP_DIR="app"
+if [ ! -d "$APP_SOURCE_DIR/.meteor" ] && [ -d "$APP_SOURCE_DIR/$METEOR_APP_DIR/.meteor" ]; then
+  APP_SOURCE_DIR="$APP_SOURCE_DIR/$METEOR_APP_DIR/"
 fi
 
 # Where we will install meteor. Has to be outside the APP_CHECKOUT_DIR.
